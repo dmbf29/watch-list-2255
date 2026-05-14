@@ -12,6 +12,7 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@list)
     else
+      @movies = Movie.order(title: :asc)
       render :new, status: :unprocessable_entity
     end
   end
