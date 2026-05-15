@@ -64,6 +64,7 @@ gem 'rails-controller-testing', group: [ :test ]
 # Custom Added
 gem "autoprefixer-rails"
 gem "bootstrap", "~> 5.3"
+gem "cloudinary"
 gem "dotenv-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "sassc-rails"

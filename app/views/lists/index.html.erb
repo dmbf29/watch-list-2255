@@ -7,12 +7,13 @@
 <div class="container my-5">
   <div class="cards">
     <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://happiclap.com/wp-content/uploads/2019/06/Everyday-Clapboard-1.jpg)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://happiclap.com/wp-content/uploads/2019/06/Everyday-Clapboard-1.jpg' %>)">
         <%= link_to list.name, list_path(list), class: 'text-white text-decoration-none' %>
       </div>
     <% end %>
     <%= simple_form_for @list do |f| %>
       <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
       <%= f.submit 'Add', class: 'btn btn-info' %>
     <% end %>
   </div>

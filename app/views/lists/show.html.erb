@@ -3,6 +3,14 @@
     <h1><%= @list.name %></h1>
     <%= link_to "Add Movie", new_list_bookmark_path(@list), class: 'btn btn-info'  %>
   </div>
+  <%#= image_tag source, alt: "text" %>
+  <%#= cl_image_tag @list.photo.key, width: 400, height: 300, crop: :fill, gravity: :face %>
+  <%#= cl_image_path @list.photo.key %>
+  <% if @list.photo.attached? %>
+    <%= cl_image_tag @list.photo.key, alt: @list.name, class: 'w-100' %>
+  <% else %>
+    <%= image_tag 'https://happiclap.com/wp-content/uploads/2019/06/Everyday-Clapboard-1.jpg', alt: @list.name %>
+  <% end %>
   <%# TODO: show movies in this list %>
   <div class="cards">
     <% @list.bookmarks.each do |bookmark| %>
