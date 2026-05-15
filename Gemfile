@@ -62,9 +62,10 @@ gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 
 # Custom Added
-gem "sprockets-rails"
-gem "sassc-rails"
-gem "bootstrap", "~> 5.3"
 gem "autoprefixer-rails"
+gem "bootstrap", "~> 5.3"
+gem "dotenv-rails"
 gem "font-awesome-sass", "~> 6.1"
+gem "sassc-rails"
 gem "simple_form"
+gem "sprockets-rails"
