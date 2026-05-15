@@ -10,7 +10,7 @@ Follow the steps **in order** to get setup on your machine.
 
 ```bash
 cd ~/code/YOUR_GITHUB_USERNAME
-git clone git@github.com:dmbf29/watch-list-2198.git rails-watchlist
+git clone git@github.com:dmbf29/watch-list-2255.git rails-watchlist
 cd rails-watchlist
 ```
 
